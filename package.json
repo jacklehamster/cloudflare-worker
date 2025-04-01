@@ -1,0 +1,20 @@
+{
+  "name": "promo-codes-worker",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev src/index.ts --config wrangler.dev.toml",
+    "deploy": "wrangler deploy",
+    "build": "bun i && tsc"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250401.0",
+    "dotenv": "^16.4.7",
+    "googleapis": "^148.0.0",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@dobuki/promo-codes": "^1.0.30",
+    "jose": "^6.0.10"
+  }
+}
