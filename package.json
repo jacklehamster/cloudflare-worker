@@ -8,8 +8,9 @@
     "build": "bun i && tsc"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250401.0",
-    "typescript": "^5.8.2"
+    "@cloudflare/workers-types": "latest",
+    "typescript": "latest",
+    "wrangler": "latest"
   },
   "dependencies": {}
 }
