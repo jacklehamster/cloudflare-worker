@@ -1,4 +1,4 @@
 name = "cloudflare-worker"
-compatibility_date = "2025-03-21"
+compatibility_date = "2025-11-17"
 main = "src/index.ts"
 compatibility_flags = ["nodejs_compat"]

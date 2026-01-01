@@ -1,5 +1,5 @@
 {
-  "name": "promo-codes-worker",
+  "name": "cloudflare-worker",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
