@@ -1,7 +1,15 @@
 export default {
   async fetch(request: Request, env: any): Promise<Response> {
-    return new Response("<a href='https://github.com/jacklehamster/cloudflare-worker'>Hello, World!</a>", {
-      headers: { "Content-Type": "text/html" },
-    });
+    const url = new URL(request.url);
+
+    // Serve only "/" from assets, keep everything else minimal.
+    if (url.pathname === "/") {
+      // Fetch from the bound ASSETS (static assets).
+      return env.ASSETS.fetch(
+        new Request(new URL("/index.html", url), request),
+      );
+    }
+
+    return new Response("Not found", { status: 404 });
   },
 };

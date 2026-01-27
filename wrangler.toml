@@ -1,4 +1,13 @@
 name = "cloudflare-worker"
-compatibility_date = "2025-11-17"
+compatibility_date = "2026-01-26"
 main = "src/index.ts"
 compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[observability.logs]
+enabled = true
+persist = true
+invocation_logs = true
